@@ -1,9 +1,12 @@
 import React from 'react';
+import imageBannerAbout from "../../assets/images/imageBannerAbout.png";
 
 const About = () => {
     return (
-        <div>
-            <h1>Page "A propos"</h1>
+        <div className="about">
+            <div className="bannerAbout">
+                <img src={imageBannerAbout} alt="Photo montagnes" />
+            </div>
         </div>
     );
 };
