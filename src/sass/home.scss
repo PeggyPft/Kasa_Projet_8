@@ -1,0 +1,23 @@
+.home {
+    margin: 15px 50px;
+    .bannerHome{
+        width: 100%;
+        height: 200px;
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            border-radius: 25px;
+            filter: brightness(60%);
+        }
+        h1{
+            position: absolute;
+            color: rgba(255, 255, 255, 1);
+            font-size: 2rem;
+            top: 25%;
+            left: 30%;
+        }
+    }
+}
