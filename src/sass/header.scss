@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     height: 68px;
-    margin: 0 50px;
+    margin-bottom: 25px;
     img{
         height: 45px;
     }
@@ -11,6 +11,7 @@
         ul{
             display: flex;
             a{
+                margin: 0 10px;
                 text-decoration: none;
                 color: rgba(0, 0, 0, 1);
                 &.underline{
@@ -18,10 +19,39 @@
                 }
             }
             li{
-                margin: 0 10px;
+                font-size: 0.75rem;
+                text-transform: uppercase;                
                 list-style: none;
-                font-size: 24px;
             }
         }
     }
+}
+
+@media screen and (min-width: 768px) {
+    .header{
+        padding: 0 70px;
+        width: 1240px;
+        img{
+            height: 68px;
+        }
+        nav{
+            ul{
+                display: flex;
+                gap: 26px;
+                a{
+                    text-decoration: none;
+                    color: rgba(0, 0, 0, 1);
+                    &.underline{
+                        text-decoration: underline;
+                    }
+                }
+                li{
+                    font-size: 1.5rem;
+                    text-transform: none;
+                    list-style: none;
+                }
+            }
+        }
+        
+    }    
 }
