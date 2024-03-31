@@ -3,15 +3,17 @@
     justify-content: space-between;
     align-items: center;
     height: 68px;
+    padding: 10px;
     margin-bottom: 25px;
+    height: 100%;
     img{
         height: 45px;
     }
     nav{
         ul{
             display: flex;
+            gap: 20px;
             a{
-                margin: 0 10px;
                 text-decoration: none;
                 color: rgba(0, 0, 0, 1);
                 &.underline{
@@ -29,8 +31,9 @@
 
 @media screen and (min-width: 768px) {
     .header{
-        padding: 0 70px;
-        width: 1240px;
+        padding: 25px 70px;
+        margin: 0;
+        max-width: 1240px;
         img{
             height: 68px;
         }

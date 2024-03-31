@@ -1,6 +1,7 @@
 .home {
     display: flex;
     flex-direction: column;
+    padding: 0 10px;
     gap: 20px;
     .bannerHome{
         width: 100%;
@@ -51,6 +52,8 @@
             }
             h1{
                 position: absolute;
+                text-align: center;
+                width: 100%;
                 margin: 0;
                 color: rgba(255, 255, 255, 1);
                 font-size: 2.5rem;
@@ -60,9 +63,7 @@
             }
         }
         .gallery {
-            width: 1240px;
-            height: 715px;
-            padding: 25px 0;
+            padding: 30px;
             display: flex;
             flex-direction: row;
             justify-content: center;
