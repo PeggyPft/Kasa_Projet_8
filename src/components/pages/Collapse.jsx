@@ -20,7 +20,7 @@ const Collapse = ({notices}) => {
                 <div className="collapse_Section" key={notice.title}>
                     <div className="collapse_Header" onClick={() => toggleSection(notice.title)}>
                         <h3>{notice.title}</h3>
-                        <img src={arrowUp} alt="arrow" className={openSections[notice.title] ? 'arrowUp open' : 'arrowUp'} />
+                        <img src={arrowUp} alt="arrow" className={`arrowUp ${openSections[notice.title] ? "open rotate" :""}`} />
                     </div>    
                     {openSections[notice.title] && <p className="collapse_Content">{notice.content}</p>}
                 </div>
