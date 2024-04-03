@@ -1,0 +1,129 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+
+    .descriptionCard{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        color : rgba(255, 96, 96, 1);
+        font-size: 1.125rem;
+        font-weight: 500;
+    }
+
+    p{
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+
+    .container_Ratings_Host {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .hostInfo{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+            height: 33px;
+            width: 135px;
+
+            h3 {
+                width: 60px;
+                font-size: 0.75rem;
+                font-weight: 500;
+                text-align: right;
+                color: rgba(255, 96, 96, 1);
+            }
+        }
+
+        .hostImage{
+            width: 32px;
+            height: 32px;
+            border-radius: 100%;
+            background-color: rgba(196, 196, 196, 1);
+        }
+
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        position: relative;
+        max-width: 1240px;
+        padding: 10px 70px;    
+    
+        .descriptionCard{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+    
+        h1 {
+            color : rgba(255, 96, 96, 1);
+            font-size: 2.25rem;
+            font-weight: 500;
+            width: 50%;
+        }
+    
+        p{
+            font-size: 1.125rem;
+            font-weight: 500;
+            width: 50%;
+        }
+    
+        .container_Ratings_Host {
+            width: 200px;
+            height: 70px;
+            position: absolute;
+            top: 450px;
+            right: 70px;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 20px;
+
+    
+            .hostInfo{
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                align-items: center;
+                gap: 10px;
+                height: 70px;
+                width: 135px;
+    
+                h3 {
+                    width: 120px;
+                    font-size: 1.125rem;
+                    font-weight: 500;
+                    text-align: right;
+                    color: rgba(255, 96, 96, 1);
+                }
+            }
+    
+            .hostImage{
+                width: 55px;
+                height: 55px;
+                border-radius: 100%;
+                background-color: rgba(196, 196, 196, 1);
+            }
+    
+        }
+    
+    }
+}
