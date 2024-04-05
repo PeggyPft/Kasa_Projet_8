@@ -1,4 +1,4 @@
-.container {
+.container_LogementSheet {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -60,7 +60,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    .container {
+    .container_LogementSheet {
         position: relative;
         max-width: 1240px;
         padding: 10px 70px;    
