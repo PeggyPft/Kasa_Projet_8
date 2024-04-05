@@ -28,6 +28,15 @@
         filter: brightness(0) invert(1);
         cursor: pointer;
      }
+
+     .pageCounter{
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        color: rgba(255, 255, 255, 1);
+     }
 }
 
 @media screen and (min-width: 768px) {
@@ -46,7 +55,7 @@
         }
     
         .pictureCarrousel{
-            width: 100%;
+            width: 1023px;
             height: 400px;
             object-fit: cover;
             border-radius: 10px;

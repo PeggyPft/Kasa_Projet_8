@@ -25,6 +25,7 @@ const Carrousel = ({pictures}) => {
             <img src={arrowLeft} alt="flèche gauche" className="arrowLeft" onClick={previousImage}/>
             <img src={pictures[currentImageIndex]} alt={`Image ${currentImageIndex + 1}`} className='pictureCarrousel' />
             <img src={arrowRight} alt="flèche droite" className="arrowRight" onClick={nextImage} />
+            <div className="pageCounter">{currentImageIndex + 1}/{pictures.length}</div>
             
         </div>
     );
