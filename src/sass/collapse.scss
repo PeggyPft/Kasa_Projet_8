@@ -1,19 +1,21 @@
-.collapse_Container {
+// Collapse de la page "A propos"
+
+.collapse_Container_About {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
 
     .collapse_Section {
         font-size: 0.813rem;
         font-weight: 700;
-        width: 335px;
-        background-color: #FF6060;
-        border-radius: 5px;
+        width: 335px;      
         .collapse_Content {
+            width: 100%;
             font-weight: 500;
             margin: 5px 0;
-            padding: 0 10px;
-            color: rgb(255, 255, 255);
+            padding: 5px 10px;
+            color: rgba(0, 0, 0, 1);
+            background-color: rgba(246, 246, 246, 0.45);
             text-align: justify;     
         }
     }
@@ -24,6 +26,8 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        background-color: #FF6060;
+        border-radius: 5px;
         h3{
             margin: 0;
             padding-left: 10px;
@@ -37,47 +41,32 @@
             height: 25px;
             padding-right: 10px;
             filter: brightness(0) invert(1);
-        }
-        
+        }       
     }
 }
 
 @media screen and (min-width: 768px) {
-.collapse_Container {
+.collapse_Container_About {
     width: 1023px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 25px;
 
     .collapse_Section {
-        width: 90%;
+        width: 100%;
         font-size: 1.5rem;
-        font-weight: 700;
-        background-color: #FF6060;
-        border-radius: 5px;
         .collapse_Content {
             font-size: 1.3rem;
             font-weight: 500;
-            margin: 5px 0;
-            padding: 0 10px;
-            color: rgb(255, 255, 255);
-            text-align: justify;         
+            padding: 10px;       
         }
     }
 
     .collapse_Header {
         min-height: 52px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
         h3{
-            margin: 0;
             padding-left: 15px;
-            color: rgb(255, 255, 255);
             font-size: 1.2rem;
-            font-weight: 700;
         }
 
         img {
@@ -85,10 +74,11 @@
             height: 32px;
             padding-right: 15px;
         }
-        
     }
 }
 }
+
+// Animation d'ouverture et fermeture sur la flèche
 
 .rotate {
     transition: transform 0.3s ease;
@@ -96,4 +86,89 @@
 
 .arrowUp.open.rotate {
     transform: translateX(-50%) rotate(180deg);
+}
+
+
+// Collapse dans la page "LogementSheet"
+
+.collapse_Container_LogementSheet {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+    .collapse_Section {
+        font-size: 0.813rem;
+        font-weight: 700;
+        width: 335px;      
+        .collapse_Content {
+            width: 100%;
+            font-weight: 500;
+            margin: 5px 0;
+            padding: 5px 10px;
+            color: rgba(0, 0, 0, 1);
+            background-color: rgba(246, 246, 246, 0.45);
+            text-align: justify;     
+
+            .listEquipements{
+                list-style: none;
+            }
+        }
+    }
+
+    .collapse_Header {
+        min-height: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #FF6060;
+        border-radius: 5px;
+        h3{
+            margin: 0;
+            padding-left: 10px;
+            color: rgb(255, 255, 255);
+            font-size: 0.813rem;
+            font-weight: 700;
+        }
+
+        img {
+            width: 25px;
+            height: 25px;
+            padding-right: 10px;
+            filter: brightness(0) invert(1);
+        }       
+    }
+}
+
+@media screen and (min-width: 768px) {
+.collapse_Container_LogementSheet {
+    width: 1023px;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+
+    .collapse_Section {
+        width: 100%;
+        font-size: 1.5rem;
+        .collapse_Content {
+            font-size: 1.3rem;
+            font-weight: 500;
+            padding: 10px;       
+        }
+    }
+
+    .collapse_Header {
+        min-height: 52px;
+        h3{
+            padding-left: 15px;
+            font-size: 1.2rem;
+        }
+
+        img {
+            width: 32px;
+            height: 32px;
+            padding-right: 15px;
+        }
+    }
+}
 }

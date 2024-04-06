@@ -3,11 +3,11 @@ import { useState } from 'react';
 import PropTypes from "prop-types";
 import arrowUp from "../../assets/images/chevron-up-solid.svg";
 
-const Collapse = ({notices}) => {
+const Collapse = ({title, content, collapseGenericName}) => {
     // gestion de l'état d'ouverture et fermeture des sections
     const [openSections, setOpenSections] = useState ({});
 
-    const toggleSection = (title) => {
+    const toggleSection = () => {
         setOpenSections(prevState => ({
             ...prevState, // spread operator pour copier le state
             [title]: !prevState[title]
@@ -15,25 +15,21 @@ const Collapse = ({notices}) => {
     };
 
     return (
-        <div className='collapse_Container'>
-            {notices.map((notice) => (
-                <div className="collapse_Section" key={notice.title}>
-                    <div className="collapse_Header" onClick={() => toggleSection(notice.title)}>
-                        <h3>{notice.title}</h3>
-                        <img src={arrowUp} alt="arrow" className={`arrowUp ${openSections[notice.title] ? "open rotate" :""}`} />
+        <div className={collapseGenericName}>            
+                <div className="collapse_Section" key={title}>
+                    <div className="collapse_Header" onClick={toggleSection}>
+                        <h3>{title}</h3>
+                        <img src={arrowUp} alt="arrow" className={`arrowUp ${openSections[title] ? "open rotate" :""}`} />
                     </div>    
-                    {openSections[notice.title] && <p className="collapse_Content">{notice.content}</p>}
+                    {content && openSections[title] && <div className="collapse_Content">{content}</div>}
                 </div>
-            ))}
         </div>
     );
 };
 
-Collapse.propTypes = {
-    notices: PropTypes.arrayOf(PropTypes.shape({
+Collapse.propTypes = {    
         title: PropTypes.string.isRequired,
-        content: PropTypes.string.isRequired
-    })).isRequired
+        content: PropTypes.node.isRequired    
 };
 
 export default Collapse;

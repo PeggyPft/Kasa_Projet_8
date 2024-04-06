@@ -21,11 +21,17 @@ const LogementSheet = () => {
     // Variable contenant les valeurs description et equipments
     const notices = [
         {title: 'Description', content: logement.description},
-        {title: 'Équipements', content: logement.equipments.join(',')}
+        {title: 'Équipements', content: (
+            <ul className='listEquipements'>
+                {logement.equipments.map((equipment, index) =>
+                    <li key={index}>{equipment}</li>
+            )}
+            </ul>
+    )}
     ];
 
     return (
-        <div className='container'>            
+        <div className='container_LogementSheet'>            
             <Carrousel pictures={logement.pictures}/>
             
             <div className="descriptionCard">
@@ -42,14 +48,17 @@ const LogementSheet = () => {
                     <img src={logement.host.picture} alt={logement.host.name} className='hostImage' />
                 </div>
             </div>
-
-            <Collapse notices={notices}/>
-
-
-        </div>
-    
-
-
+            <div className='containerGlobalCollapse'>
+                {notices.map((notice, index) => (            
+                <Collapse 
+                    collapseGenericName={"collapse_Container_LogementSheet"}
+                    key={index}
+                    title={notice.title}
+                    content={notice.content}
+                    />
+                ))} 
+            </div>       
+        </div> 
     );
 };
 

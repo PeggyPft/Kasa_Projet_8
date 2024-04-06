@@ -10,7 +10,14 @@ const About = () => {
                 <img src={imageBannerAbout} alt="Photo montagnes" />
             </div>
             <div className="collapseContainer">
-                <Collapse notices={collapseData} />
+                {collapseData.map((collaps, index) => (
+                <Collapse 
+                    collapseGenericName={"collapse_Container_About"} 
+                    key={index}
+                    title={collaps.title}
+                    content={collaps.content}
+                />
+            ))}
             </div>
 
         </div>
