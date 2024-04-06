@@ -13,9 +13,9 @@ const Ratings = ({logementId}) => {
     const stars = [];
     for (let i = 0; i <= 4; i++) {
         if (i <= rating) {
-            stars.push(<img key={i} src={redStar} alt="étoile validée" />);
+            stars.push(<img className='redStar' key={i} src={redStar} alt="étoile validée" />);
         } else {
-            stars.push(<img key={i} src={greyStar} alt="étoile non validée" />);
+            stars.push(<img className='greyStar' key={i} src={greyStar} alt="étoile non validée" />);
         }
         
     }
