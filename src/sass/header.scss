@@ -2,9 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
-    height: 100%;
-    width: 335px;
+    padding: 25px;
+    width: 100%;
     img{
         height: 45px;
     }
@@ -30,7 +29,7 @@
 
 @media screen and (min-width: 768px) {
     .header{
-        padding: 25px 110px;
+        padding: 25px 70px;
         margin: 0;
         width: 100%;
         max-width: 1240px;
