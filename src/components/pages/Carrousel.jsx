@@ -5,6 +5,7 @@ import arrowRight from '../../assets/images/arrow-right.svg';
 
 const Carrousel = ({pictures}) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const showNavigation = pictures.length > 1;
     
     const previousImage = () => {
         setCurrentImageIndex((prevIndex) =>
@@ -22,10 +23,18 @@ const Carrousel = ({pictures}) => {
 
     return (
         <div className="carrousel">
-            <img src={arrowLeft} alt="flèche gauche" className="arrowLeft" onClick={previousImage}/>
-            <img src={pictures[currentImageIndex]} alt={`Image ${currentImageIndex + 1}`} className='pictureCarrousel' />
-            <img src={arrowRight} alt="flèche droite" className="arrowRight" onClick={nextImage} />
-            <div className="pageCounter">{currentImageIndex + 1}/{pictures.length}</div>
+            {showNavigation && (
+            <>
+                <img src={arrowLeft} alt="flèche gauche" className="arrowLeft" onClick={previousImage}/>
+                <img src={pictures[currentImageIndex]} alt={`Image ${currentImageIndex + 1}`} className='pictureCarrousel' />
+                <img src={arrowRight} alt="flèche droite" className="arrowRight" onClick={nextImage} />
+                <div className="pageCounter">{currentImageIndex + 1}/{pictures.length}</div>
+            </>
+            )}
+            
+            {!showNavigation && (
+                <img src={pictures[currentImageIndex]} alt={'Image ${currentImageIndex + 1}'} className='pictureCarrousel'/>
+            )}
             
         </div>
     );
