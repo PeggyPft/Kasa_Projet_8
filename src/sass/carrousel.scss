@@ -33,7 +33,7 @@
         position: absolute;
         bottom: 20px;
         width: 100%;
-        display: flex;
+        display: none;
         justify-content: center;
         color: rgba(255, 255, 255, 1);
      }
@@ -69,6 +69,10 @@
             top: 50%;
             transform: translateY(-50%);
             cursor: pointer;
+         }
+
+         .pageCounter{
+            display: flex;
          }
     }
 }
