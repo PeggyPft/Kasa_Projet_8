@@ -4,19 +4,11 @@
     justify-content: center;
     align-items: center;
     padding: 0 20px;
-    gap: 50px;
+    gap: 5px;
     
     .bannerAbout{
         width: 100%;
-        height: 130px;
-    
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-            filter: brightness(60%);
-        }
+        height: 130px;   
     }
 
     .collapseContainer{
@@ -43,13 +35,6 @@
             width: 100%;
             height: 220px;
         
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 25px;
-                filter: brightness(60%);
-            }
         }
     
         .collapseContainer{
