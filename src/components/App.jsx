@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Header from './Header';
@@ -16,6 +16,7 @@ const App = () => {
         <Route path="/about" element={<About/>}/>
         <Route path="/logement/:id" element={<LogementSheet/>}/>
         <Route path="*" element={<ErrorPage/>}/>
+        <Route path="/404" element={<Navigate to="/404"/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>
