@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const ErrorPage = () => {
     return (
@@ -9,7 +9,7 @@ const ErrorPage = () => {
             <p>Oups ! La page que <span className='returnLine'></span>vous demandez n'existe pas.</p>
 
             <div className="errorLink">
-                <Link to="/">Retourner sur la page d'accueil</Link>
+                <NavLink to="/">Retourner sur la page d'accueil</NavLink>
             </div>
         </div>        
         
