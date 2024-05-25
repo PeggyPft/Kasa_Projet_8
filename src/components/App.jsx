@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route, Navigate, HashRouter } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Header from './Header';
@@ -9,17 +9,17 @@ import ErrorPage from './pages/ErrorPage';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header/>
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/" exact element={<Home/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/logement/:id" element={<LogementSheet/>}/>
         <Route path="/" element={<ErrorPage/>}/>
         <Route path="/404" element={<Navigate to="/404"/>}/>
       </Routes>
       <Footer/>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
